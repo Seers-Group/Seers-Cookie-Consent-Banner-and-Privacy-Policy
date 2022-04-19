@@ -1,0 +1,1 @@
+DROP TABLE `#__seers_cookie_consent`;

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.0" type="plugin" group="system" method="upgrade">
+	<name>System - Seers | Cookie Consent Banner and Privacy Policy
+</name>
+	<author>NICK.SPENCER</author>
+	<creationDate>Nov 2019</creationDate>
+	<copyright>Copyright (C) 2009 - 2020 NICK.SPENCER All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>nick.spencer@seersco.com</authorEmail>
+	<authorUrl>www.seersco.com</authorUrl>
+	<version>4.0.0</version>
+	<description>PLG_SEERSCOOKIECONSENT_XML_DESCRIPTION</description>
+	<install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+	<files>
+		<filename plugin="seerscookieconsent">seerscookieconsent.php</filename>
+		<filename>index.html</filename>
+		<folder>sql</folder>
+	</files>
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_seerscookieconsent.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_seerscookieconsent.sys.ini</language>
+	</languages>
+	
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				
+				<field
+					name="my_url"
+					type="url"
+					label="PLG_SEERSCOOKIECONSENT_FIELD_URL_LABEL"
+					description="PLG_SEERSCOOKIECONSENT_FIELD_URL_DESC"
+					size="100"
+					default=""
+					required="true"
+				/>
+
+				<field
+					name="my_email"
+					type="text"
+					label="PLG_SEERSCOOKIECONSENT_FIELD_EMAIL_LABEL"
+					description="PLG_SEERSCOOKIECONSENT_FIELD_EMAIL_DESC"
+					size="100"
+					validate="email"
+					required="true"
+				/>
+
+				<field
+					name="domain_group_id"
+					type="text"
+					label="PLG_SEERSCOOKIECONSENT_FIELD_DOMAIN_GROUP_ID_LABEL"
+					description="PLG_SEERSCOOKIECONSENT_FIELD_DOMAIN_GROUP_ID_DESC"
+					size="100"
+					default=""
+					hint="Press Save to get Domain Group ID"
+				/>
+            	<field name="note1" type="note" class="alert" label="PLG_SEERSCOOKIECONSENT_FIELD_NOTE_LABEL" description="PLG_SEERSCOOKIECONSENT_FIELD_NOTE_DESC" />						
+			</fieldset>
+		</fields>
+	</config>
+	 <updateservers>
+		 <server type="extension" priority="1" name="SeersCookieConsent for Joomla!"><![CDATA[https://seersco.com/extensions/joomla/extension.xml]]></server>
+	 </updateservers>	
+</extension>

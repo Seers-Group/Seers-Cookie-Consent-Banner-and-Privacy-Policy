@@ -117,7 +117,7 @@ class PlgSystemSeersCookieConsent extends JPlugin
 		$postData = array(
 			'domain'=>$my_url,
 			'email'=>$my_email,
-			'secret'=>'$2y$10$9ygTfodVBVM0XVCdyzEUK.0FIuLnJT0D42sIE6dIu9r/KY3XaXXyS',
+			'secret'=>'---------secretkey--------------------',
 			'platform'=>'joomla',
 			'lang' => str_replace("-","_",$this->langTag),
 		);
@@ -215,7 +215,7 @@ class PlgSystemSeersCookieConsent extends JPlugin
 		$postData = array(
 			'domain'=>$my_url,
 			'isactive'=>$enabled,
-			'secret'=>'$2y$10$9ygTfodVBVM0XVCdyzEUK.0FIuLnJT0D42sIE6dIu9r/KY3XaXXyS',
+			'secret'=>'------------------secretkey------------------------------',
 			'platform'=>'joomla',
 			'pluginname' => $pluginname
 		);
